@@ -1,7 +1,7 @@
 from flask import Flask
 
 from controllers.admin_controller import admin_controller
-from controllers.translate_controller import translate_controller # type: ignore
+from controllers.translate_controller import translate_controller
 from controllers.history_controller import history_controller
 
 from os import environ

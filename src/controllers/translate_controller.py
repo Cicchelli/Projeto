@@ -23,7 +23,8 @@ def post_translate():
     translate_from = request.form["translate-from"]
     translate_to = request.form["translate-to"]
 
-    translated = GoogleTranslator(source=translate_from, target=translate_to).translate(text_to_translate)
+    translated = GoogleTranslator(source=translate_from,
+    target=translate_to).translate(text_to_translate)
 
     history_data = {
         "text_to_translate": text_to_translate,
@@ -49,7 +50,8 @@ def reverse_translate():
     translate_from = request.form.get("translate-from")
     translate_to = request.form.get("translate-to")
 
-    translated = GoogleTranslator(source=translate_from, target=translate_to).translate(text_to_translate)
+    translated = GoogleTranslator(source=translate_from,
+    target=translate_to).translate(text_to_translate)
 
     default_translation = {
         "text_to_translate": translated,
