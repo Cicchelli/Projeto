@@ -19,6 +19,7 @@ app.register_blueprint(history_controller, url_prefix='/history')
 
 def start_server(host="0.0.0.0", port=8000):
     
+    
     if environ.get("FLASK_ENV") != "production":
         return app.run(debug=True, host=host, port=port)
     else:
