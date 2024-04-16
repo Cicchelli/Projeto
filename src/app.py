@@ -3,7 +3,7 @@
 from os import environ
 
 from flask import Flask
-from waitress import serve
+from waitress import serve # type: ignore
 
 from controllers.admin_controller import admin_controller
 from controllers.history_controller import history_controller

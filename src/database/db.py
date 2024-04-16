@@ -1,3 +1,5 @@
+"""Module providing a function printing python version."""
+
 from os import environ
 
 from pymongo import MongoClient

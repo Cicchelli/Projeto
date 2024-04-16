@@ -1,6 +1,6 @@
 """Module providing a function printing python version."""
 
-from deep_translator import GoogleTranslator
+from deep_translator import GoogleTranslator # type: ignore
 from flask import Blueprint, render_template, request
 
 from models.history_model import HistoryModel
