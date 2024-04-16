@@ -5,6 +5,7 @@ from controllers.translate_controller import translate_controller
 from controllers.history_controller import history_controller
 
 from os import environ
+
 from waitress import serve
 
 
@@ -17,6 +18,7 @@ app.register_blueprint(translate_controller, url_prefix="/")
 app.register_blueprint(history_controller, url_prefix='/history')
 
 def start_server(host="0.0.0.0", port=8000):
+    
     if environ.get("FLASK_ENV") != "production":
         return app.run(debug=True, host=host, port=port)
     else:

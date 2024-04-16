@@ -22,3 +22,4 @@ def test_request_history():
         assert item["text_to_translate"] == history[index]["text_to_translate"]
         assert item["translate_from"] == history[index]["translate_from"]
         assert item["translate_to"] == history[index]["translate_to"]
+        
