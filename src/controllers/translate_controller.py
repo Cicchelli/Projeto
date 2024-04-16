@@ -16,7 +16,8 @@ def get_translate():
         "translated": "What do you want to translate?"
     }
     languages = LanguageModel.list_dicts()
-    return render_template("index.html", languages=languages, **default_translation)
+    return render_template("index.html", languages=languages,
+                            **default_translation)
 
 @translate_controller.route("/", methods=["POST"])
 
@@ -62,4 +63,5 @@ def reverse_translate():
     }
 
     languages = LanguageModel.list_dicts()
-    return render_template("index.html", languages=languages, **default_translation)
+    return render_template("index.html", languages=languages,
+                            **default_translation)
