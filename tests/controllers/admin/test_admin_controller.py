@@ -15,7 +15,7 @@ def test_history_delete(app_test):
             "translate-to": "pt",
         },
         {
-            "text-to-translate": "What type of music do you like to listen to?",
+            "text-to-translate": "What do you like to eat",
             "translate-from": "en",
             "translate-to": "pt",
         },
@@ -25,7 +25,7 @@ def test_history_delete(app_test):
 
     # Encontra o histórico que desejamos excluir
     history_to_delete = HistoryModel.find_one(
-        {"text-to-translate": "What type of music do you like to listen to?"}
+        {"text-to-translate": "What do you like to eat"}
     )
 
     # Encontra o usuário para autenticação
