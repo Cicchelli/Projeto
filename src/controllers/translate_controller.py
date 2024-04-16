@@ -7,7 +7,6 @@ from models.history_model import HistoryModel
 translate_controller = Blueprint("translate_controller", __name__)
 
 @translate_controller.route("/", methods=["GET"])
-
 def get_translate():
     default_translation = {
         "text_to_translate": "O que deseja traduzir?",
@@ -20,7 +19,6 @@ def get_translate():
                             **default_translation)
 
 @translate_controller.route("/", methods=["POST"])
-
 def post_translate():
     text_to_translate = request.form["text-to-translate"]
     translate_from = request.form["translate-from"]
@@ -46,7 +44,6 @@ def post_translate():
     )
 
 @translate_controller.route("/reverse", methods=["POST"])
-
 def reverse_translate():
     text_to_translate = request.form.get("text-to-translate")
     translate_from = request.form.get("translate-from")
