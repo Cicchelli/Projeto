@@ -20,6 +20,7 @@ def get_translate():
 
 @translate_controller.route("/", methods=["POST"])
 def post_translate():
+    
     text_to_translate = request.form["text-to-translate"]
     translate_from = request.form["translate-from"]
     translate_to = request.form["translate-to"]
