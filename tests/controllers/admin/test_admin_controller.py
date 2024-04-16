@@ -1,7 +1,11 @@
+"""Module providing a function printing python version."""
+
 from src.models.history_model import HistoryModel
 from src.models.user_model import UserModel
 
+
 def test_history_delete(app_test):
+    """Function printing python version."""
 
     # Usuário de exemplo
     user_data = {"name": "Stephan", "level": "admin", "token": "123456"}
